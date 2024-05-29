@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/scroll.css" />
+    <link rel="stylesheet" href="./assets/css/loader.css">
+
+    <script src="./assets/js/map.js" defer></script>
 
     <title>Contacto- Uriel Carvajalino Ortiz</title>
   </head>
@@ -128,8 +131,8 @@
               </div>
             </section>
             <section class="contact__form-box">
-              <div class="contact__map">
-                <!--<iframe frameborder="0" scrolling="no" marginheignt="0" marginwidth="0"  loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.6746084202555!2d-73.35645252515347!3d8.235438400906078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e677bec71bc08dd%3A0x87799706d32a0a53!2sParque%20Principal%20Oca%C3%B1a!5e0!3m2!1ses!2sco!4v1717015060483!5m2!1ses!2sco"  ></iframe>-->
+              <div class="contact__map" id="load-iframe-map">
+                <span class="loader"></span>
               </div>
               <header class="contact__form-header">
                 <h3 class="form-header__title">
@@ -160,16 +163,7 @@
                       />
                       <label for="name" class="form__label">Email</label>
                     </div>
-                    <div class="form__group">
-                      <input
-                        type="text"
-                        class="form__input"
-                        name="name"
-                        required
-                        placeholder="Nombre"
-                      />
-                      <label for="email" class="form__label">Nombre</label>
-                    </div>
+                  
                     <div class="form__group">
                       <input
                         type="text"
@@ -182,15 +176,16 @@
                     </div>
                   </section>
                   <section class="form__rigth">
-                    <div class="form__group">
+                    <div class="form__group form__group--textarea">
                       <textarea
                         class="form__input form__input--textarea"
                         name="mensaje"
                         required
                         placeholder="Mensaje"
                       ></textarea>
+                      <label for="mensaje" class="form__label">Mensaje</label>
                     </div>
-                    <label for="mensaje" class="form__label">Mensaje</label>
+                    
                   </section>
 
                   

@@ -1268,7 +1268,7 @@ body
 }
 .form__group{
     position:relative;
-    margin-bottom: 2.15rem;
+    margin-bottom: 2.5rem;
 }
 
 .form__input{
@@ -1285,7 +1285,9 @@ body
     border-radius: 0.5rem;
     outline: none;
     box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.10);
+    background: 0 0;
     background-color: transparent;
+    line-height: 2.1rem;
 }
 
 .form__input:focus{
@@ -1293,12 +1295,80 @@ body
 }
 
 .form__label{
-    position: ;
+
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    
+    color: var(--color-company);
+    transition: all 300ms ease-in-out;
+    pointer-events: none;
+
+
+  
+}
+/*efectos geniales del formulario*/
+.form__input:focus~label,
+.form__input:not(:placeholder-shown)~label{
+    top: -2rem;
+    left: 0;
+    z-index: 1;
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+}
+
+.form__input::-webkit-input-placeholder{
+    color: transparent;
+}
+
+.form__input::-moz-placeholder{
+    color: transparent;
 }
 
 
 
+.form__rigth{
+    flex-basis: 50%;
+    max-width: 50%;
+    max-height: 100%;
+}
+.form__group--textarea{
+    height: 100%;
+}
 .form__input--textarea{
     display: block;
+    resize:none;
     height: 100%;
+
+}
+
+.form__button{
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size:1.5rem ;
+    border: 0.2rem solid var(--color-secondary);
+    color: var(--color-titles);
+    background-color: var(--color-primary);
+    border-radius: 3rem;
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 20);
+    transition: all 300ms ease-in-out;
+    
+}
+
+.form__button:hover{
+background-color: var(--color-secondary);
+color: var(--color-primary);
+}
+
+.contact__map{
+
+width: 100%;
+min-height: 15rem;
+margin-bottom: 3.5rem;
+overflow: hidden;
+}
+
+.contact__iframe{
+    width: 100%;
+    height: 14rem;
 }
