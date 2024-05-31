@@ -309,4 +309,56 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+
+  .form__container {
+    display: flex;
+   
+    gap: 1rem;
+  }
+
+  .form__left,
+  .form__right {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .form__input {
+    width: 100%; /* Ajusta el ancho de los campos de entrada */
+    box-sizing: border-box;
+  }
+
+  .form__submit {
+    width: 100%; /* Ajusta el ancho del botón de enviar */
+  }
+
+   /* Evitar el desplazamiento automático al enfocar un campo de entrada */
+   html, body {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    position: fixed;
+    width: 100%;
+  }
+
+  .form__input {
+    width: 100%; /* Ajusta el ancho de los campos de entrada */
+    box-sizing: border-box;
+  }
+
+  .form__submit {
+    width: 100%; /* Ajusta el ancho del botón de enviar */
+  }
+
+
+  /* Establece el ancho del campo de mensaje */
+  .form__input--textarea {
+    width: calc(100% - 2rem); /* Resta el margen para asegurar que ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+
+
+ 
 }
